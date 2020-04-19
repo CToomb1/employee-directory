@@ -1,0 +1,98 @@
+[
+    {
+      "id": 1,
+      "name": "Grills",
+      "occupation": "Chef",
+      "email": "iCook@gmail.com",
+      "phone": "975-353-5556",
+      "location": "Edison, NJ"
+    },
+    {
+      "id": 2,
+      "name": "Justin Time",
+      "occupation": "Restauranteur",
+      "email": "clock2@gmail.com",
+      "phone": "133-456-7891",
+      "location": "Boston, NY"
+    },
+    {
+      "id": 3,
+      "name": "Seymour Butts",
+      "occupation": "Photographer",
+      "email": "s.butt@gmail.com",
+      "phone": "111-111-2888",
+      "location": "Nashville, TN"
+    },
+    {
+      "id": 4,
+      "name": "Anita Dick",
+      "occupation": "Exotic Dancer",
+      "email": "adick@gmail.com",
+      "phone": "515-444-5156",
+      "location": "Detroit, MI"
+    },
+    {
+      "id": 5,
+      "name": "Ricky Web",
+      "occupation": "Code Expert",
+      "email": "rdweb@gmail.com",
+      "phone": "927-543-0090",
+      "location": "St. Cloud, MN"
+    },
+    {
+      "id": 6,
+      "name": "Harry Johnson",
+      "occupation": "Patent Clerk",
+      "email": "johnson@gmail.com",
+      "phone": "111-425-0012",
+      "location": "San Francisco, CA"
+    },
+    {
+      "id": 7,
+      "name": "Mike Hunt",
+      "occupation": "Librarian",
+      "email": "mhunt@gmail.com",
+      "phone": "424-919-3321",
+      "location": "Dallas, TX"
+    },
+    {
+      "id": 8,
+      "name": "Eatun Wang",
+      "occupation": "Dishwasher",
+      "email": "ewang@gmail.com",
+      "phone": "444-555-6666",
+      "location": "Las Vegas, NV"
+    },
+    {
+      "id": 9,
+      "name":  "Bob Bobson",
+      "occupation": "Headhunter",
+      "email": "BobSonBob@gmail.com",
+      "phone": "862-723-1111",
+      "location": "Key West, FL"
+    },
+    {
+      "id": 10,
+      "name": "Jack Ripper",
+      "occupation": "Barber",
+      "email": "jscream@gmail.com",
+      "phone": "477-234-4566",
+      "location": "London, England"
+    },
+    {
+      "id": 11,
+      "name": "Austin Powers",
+      "occupation": "Chauffeur",
+      "email": "yeahbaby@gmail.com",
+      "phone": "217-178-2997",
+      "location": "Baltimore, MD"
+    },
+    {
+      "id": 12,
+      "name": "Angry Beavers",
+      "occupation": "Lumberjack",
+      "email": "nickelodeon@gmail.com",
+      "phone": "987-654-3210",
+      "location": "Point Sebago, ME"
+    }
+]

@@ -1,0 +1,154 @@
+import React from 'react'
+import styled from 'styled-components'
+import { useTable, useSortBy } from 'react-table'
+import employees from "./employees.json";
+
+
+const Styles = styled.div`
+  padding: 1rem;
+  table {
+    border-spacing: 0;
+    border: 1px solid black;
+    tr {
+      :last-child {
+        td {
+          border-bottom: 0;
+        }
+      }
+    }
+    th,
+    td {
+      margin: 0;
+      padding: 0.5rem;
+      border-bottom: 1px solid black;
+      border-right: 1px solid black;
+      :last-child {
+        border-right: 0;
+      }
+    }
+  }
+`
+
+function Table({ columns, data }) {
+    const {
+        getTableProps,
+        getTableBodyProps,
+        headerGroups,
+        rows,
+        prepareRow,
+    } = useTable(
+        {
+            columns,
+            data,
+        },
+        useSortBy
+    )
+
+    return (
+        <>
+            <table {...getTableProps()}>
+                <thead>
+                    {headerGroups.map(headerGroup => (
+                        <tr {...headerGroup.getHeaderGroupProps()}>
+                            {headerGroup.headers.map(column => (
+
+                                <th {...column.getHeaderProps(column.getSortByToggleProps())}>
+                                    {column.render('Header')}
+                                    {/* Add a sort direction indicator */}
+                                    <span>
+                                        {column.isSorted
+                                            ? column.isSortedDesc
+                                                ? ' 🔽'
+                                                : ' 🔼'
+                                            : ''}
+                                    </span>
+                                </th>
+                            ))}
+                        </tr>
+                    ))}
+                </thead>
+                <tbody {...getTableBodyProps()}>
+                    {rows.map(
+                        (row, i) => {
+                            prepareRow(row);
+                            return (
+                                <tr {...row.getRowProps()}>
+                                    {row.cells.map(cell => {
+                                        return (
+                                            <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
+                                        )
+                                    })}
+                                </tr>
+                            )
+                        }
+                    )}
+                </tbody>
+            </table>
+            <br />
+            <div>Showing the first 20 results of {rows.length} rows</div>
+        </>
+    )
+}
+
+function App() {
+    const columns = React.useMemo(
+        () => [
+            {
+                Header: 'Employee',
+                columns: [
+                    {
+                        Header: 'Sort by Name',
+                        accessor: 'name',
+                    }
+                ],
+            },
+            {
+                Header: 'Occupation',
+                columns: [
+                    {
+                        Header: 'Sort by Occupation',
+                        accessor: 'occupation',
+                    }
+                ],
+            },
+            {
+                Header: 'Location',
+                columns: [
+                    {
+                        Header: 'Sort by Location',
+                        accessor: 'location',
+                    }
+                ],
+            },
+            {
+                Header: 'Email',
+                columns: [
+                    {
+                        Header: 'Sort by Email',
+                        accessor: 'email',
+                    }
+                ],
+            },
+            {
+                Header: 'Phone Number',
+                columns: [
+                    {
+                        Header: 'Sort by Phone Number',
+                        accessor: 'phone',
+                    }
+                ],
+            },
+        ],
+        []
+    )
+
+    const data = React.useMemo(() => employees, [])
+
+    return (
+        <Styles>
+            <Table columns={columns} data={data} />
+        </Styles>
+    )
+}
+
+export default App
